@@ -1,0 +1,7 @@
+main{
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}

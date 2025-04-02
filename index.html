@@ -14,6 +14,40 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="background">
+    <div id="images">
+      <img src="./assets/members/peter-quill.png" alt="Foto de Peter Quill"/>
+      <img src="./assets/members/gamora.png" loading="lazy" alt="Foto da Gamora"/>
+      <img src="./assets/members/drax.png" loading="lazy" alt="Foto do Drax"/>
+      <img src="./assets/members/mantis.png" loading="lazy" alt="Foto da Mantis"/>
+      <img src="./assets/members/rocket.png" loading="lazy" alt="Foto do Rocket"/>
+      <img src="./assets/members/groot.png" loading="lazy" alt="Foto do Groot"/>
+    </div>
+  </div>
+
+  <div class="app">
+    <header>
+      <img src="./assets/logo.png" alt="Logotipo">
+
+      <button type="button" id="menu" onclick="changeMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <h1>Peter Quill</h1>
+
+      <div>
+        <button type="button" onclick="navigationMember(-1)" id="button__prev" disabled>Voltar</button>
+        <button type="button" onclick="navigationMember(1)"  id="button__next">Avançar</button>
+      </div>
+    </main>
+
+  </div>
+
+  
 
   <script src="./script/index.js"></script>
   <script src="./script/changeName.js"></script>
