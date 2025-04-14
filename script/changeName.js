@@ -1,36 +1,33 @@
 let interval = null;
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-function randomLetter() {
+function randomLetter(){
   const randomNumber = Math.floor(Math.random() * letters.length)
   return letters[randomNumber];
 }
 
-function changeName(newName) {
-  console.log({newName});
-  const name = document.getElementById("member__name");
-
+function changeName(newName){
+  const name = document.getElementById('member__name');
   name.innerText = newName
-  name.setAttribute('data-value', newName)
-
-  let iteration = 0;
+  name.setAttribute("data-value", newName)
+  
+  let interation = 0;
   
   clearInterval(interval);
   
   interval = setInterval(() => {
     let text = name.innerText.split("")
-
+    
     text = text.map((_, index) => {
-      const isCorrectLetter = index < iteration
+      const isCorrectLetter = index < interation
       return isCorrectLetter ? newName[index] : randomLetter()
     })
-
-    name.innerText = text.join("");
     
-    if(iteration >= newName.length){ 
+    name.innerText = text.join("");
+    if(interation >= newName.length){
       clearInterval(interval);
     }
     
-    iteration += 1;
+    interation += 1;
   }, 60);
 }
